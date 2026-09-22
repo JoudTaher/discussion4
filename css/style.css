@@ -52,32 +52,25 @@ body{
     margin-bottom: 10px;
     text-align: center;
  }
-/* STEP A - Create the grid */
-.gallery {
+
+
+ .gallery {
     display: grid;
     grid-template-columns: 250px 250px 250px;
-
-    border: 2px dashed black;
-    width: 90%;
     gap: 20px;
 
-    /* STEP C */
+    width: 90%;
+    border: 2px dashed black;
+
+    margin: 0 auto;
+
     align-items: center;
     justify-items: center;
-
-    /* Centers the whole grid */
-    margin: 0 auto;
+    justify-content: center;
 }
 
-
-/* STEP B - Fix image sizing */
 .gallery img {
-    width: 100%;
-}
-
-
-/* STEP 4 - Coffee shop bottom-left, spanning 2x2 */
-.coffeeshop {
-    grid-column: 1 / span 2;
-    grid-row: 3 / span 2;
+    width: 250px;
+    max-width: 100%;
+    height: auto;
 }
