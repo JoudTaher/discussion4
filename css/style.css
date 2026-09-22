@@ -1,76 +1,82 @@
-body{
-    margin:5px;
-    padding:5px;
-    line-height:1.15;
- }
-  
- h1,h2, h3{
-    font-weight: bold;
-    margin:15px 0px; 
- }
-
- h1{
-   font-size: x-large;
- }
-
- ul li{
-    margin-left: 25px;
-    list-style-type: upper-roman;
- }
-
- nav li{
-    background-color: aqua;
-    border: 2px solid black;
-    border-radius: 25px;
-    display: inline-block;
-    padding: 10px;
-    width:18%;
-    margin: 15px 15px 0px 0px;
-    text-align: center;
- }
-
- main img{
-    /* width:24%; */
+* {
     box-sizing: border-box;
-    padding:15px;
-    border:6px dashed green;
-    margin:0;
-    display: inherit;
- }
+}
 
- header img{
-   width: 100%;
-   height:300px;
-   object-fit: cover;
- }
+body {
+    margin: 0;
+    line-height: 1.15;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f1ee;
+    color: #1f1f1f;
+}
 
- p{
-    line-height:2;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color:darkslategray;
-    background-color: bisque;
-    margin-bottom: 10px;
-    text-align: center;
- }
+h1, h2, h3 {
+    font-weight: bold;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin: 10px 0 14px 20px;
+}
+
+header {
+    background: #f3f1ee;
+}
+
+.hero-banner {
+    width: 100%;
+    height: 210px;
+    background-image: url("../images/cover_image.jpg");
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.18);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+main {
+    padding: 18px 0 30px;
+    background: #f3f1ee;
+}
+
 .gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-
-    width: 90%;
-    border: 2px dashed black;
+    width: 92%;
     margin: 0 auto;
-
-    align-items: center;
-    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    gap: 24px 18px;
+    align-items: start;
 }
 
 .gallery img {
+    display: block;
     width: 100%;
-    height: auto;
+    height: 235px;
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+    border: 4px dashed #2fae4d;
+    background: #f3d9d2;
+    box-shadow: 0 0 0 2px rgba(47, 174, 77, 0.18);
 }
 
+.coffee1,
+.coffee2,
+.coffee3,
+.coffee4,
+.coffee5,
 .coffeeshop {
-    grid-column: 1 / span 2;
-    grid-row: 2 / span 2;
+    border-radius: 0;
+}
+
+@media (max-width: 760px) {
+    .gallery {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
 }
