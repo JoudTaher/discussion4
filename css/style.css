@@ -52,25 +52,25 @@ body{
     margin-bottom: 10px;
     text-align: center;
  }
-
-
- .gallery {
+.gallery {
     display: grid;
-    grid-template-columns: 250px 250px 250px;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
 
     width: 90%;
     border: 2px dashed black;
-
     margin: 0 auto;
 
     align-items: center;
     justify-items: center;
-    justify-content: center;
 }
 
 .gallery img {
-    width: 250px;
-    max-width: 100%;
+    width: 100%;
     height: auto;
+}
+
+.coffeeshop {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 2;
 }
